@@ -1,0 +1,35 @@
+{
+  "name": "ui5-codecompletion",
+  "version": "1.0.0",
+  "description": "code completion for UI5 *.js files in WebStorm",
+  "bin": "bin/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "UI5",
+    "codecompletion"
+  ],
+  "author": "Volker Buzek <volker.buzek@js-soft.com>",
+  "contributors": [
+    "Constantin Lebrecht <constantin.lebrecht@js-soft.com>"
+  ],
+  "license": "WTFPL",
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "config": "^1.26.2",
+    "fs-extra": "^4.0.1",
+    "glob": "^7.1.2",
+    "handlebars": "^4.0.10",
+    "lodash": "^4.17.4",
+    "progress": "^2.0.0",
+    "xml2js": "^0.4.19",
+    "yargs": "^8.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.0",
+    "proxyquire": "^1.8.0",
+    "sinon": "^3.2.1"
+  }
+}

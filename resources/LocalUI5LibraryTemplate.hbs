@@ -1,0 +1,17 @@
+<component name="libraryTable">
+    <library name="LocalUI5Library" type="javaScript">
+        <properties>
+            <sourceFilesUrls>
+                {{#each sourceFiles}}
+                    <item url="file://$PROJECT_DIR$/{{this}}"/>
+                {{/each}}
+            </sourceFilesUrls>
+        </properties>
+        <CLASSES>
+            {{#each sourceFiles}}
+                <root url="file://$PROJECT_DIR$/{{this}}"/>
+            {{/each}}
+        </CLASSES>
+        <SOURCES/>
+    </library>
+</component>
