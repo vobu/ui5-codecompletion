@@ -1,4 +1,7 @@
 # UI5 codecompletion
+
+[![Build Status](https://travis-ci.org/vobujs/ui5-codecompletion.svg?branch=develop)](https://travis-ci.org/vobujs/ui5-codecompletion)
+
 `ui5-codecompletion` is a npm module providing a CLI that enables code completion in WebStorm's JS editor for a 
 specific version of [(open)UI5](https://openui5.org). 
 
