@@ -13,7 +13,7 @@ describe("sourcesDir parameter", function () {
 });
 
 describe("configure", function() {
-    it("updateUI5CompletionFromSource: should use 3 files for code completion in locallib.xmll", function(done) {
+    it("updateUI5CompletionFromSource: should use 3 files for code completion in locallib.xml", function(done) {
         const helpers = proxyquire('../lib/helpers', {
             "glob": {
                 sync: function(path, options) {
@@ -44,6 +44,43 @@ describe("configure", function() {
         });
 
         helpers.updateUI5CompletionFromSource('/fake/mock/path');
+    });
+
+    it("updateUI5CompletionFromSource: should only allow relative references to UI5 lib (in project dir)", function(done) {
+        let mockUI5libDir = path.join(process.cwd(), 'local', 'ui5', 'lib');
+        let absPath = path.join(mockUI5libDir, 'resources');
+        let sSourcePath = path.relative(process.cwd(), absPath);
+        let fakeFile = path.join(sSourcePath, 'bla', 'a-dbg.js');
+        
+        const helpers = proxyquire('../lib/helpers', {
+            "glob": {
+                sync: function(path, options) {
+                    return [
+                        fakeFile
+                    ]
+                }
+            },
+            "fs-extra": {
+                ensureDirSync: function(target) {
+                    return true;
+                },
+                writeFileSync: function(src, target) {
+                    xml2jsString(target, (err, result) => {
+                        if (err) {
+                            expect.fail("error parsing XML string");
+                            done();
+                        }
+                        let url = result.component.library["0"].properties["0"].sourceFilesUrls["0"].item["0"].$.url;
+                        
+                        expect(url).to.not.include(process.cwd());
+                        done();
+                        return true;
+                    });
+                }
+            }
+        });
+
+        helpers.updateUI5CompletionFromSource(mockUI5libDir);
     });
    
     it("addEntryToXmlFileAt: should use fallback file if no jsLibraryMappings.xml exists", function (done) {
