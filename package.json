@@ -1,6 +1,6 @@
 {
   "name": "ui5-codecompletion",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "code completion for UI5 *.js files in WebStorm",
   "bin": "bin/index.js",
   "scripts": {
@@ -32,5 +32,7 @@
     "proxyquire": "^1.8.0",
     "sinon": "^3.2.1"
   },
-  "engines" : { "node" : ">=6.4.0" }
+  "engines": {
+    "node": ">=6.4.0"
+  }
 }
