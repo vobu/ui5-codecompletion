@@ -6,7 +6,7 @@
 `ui5-codecompletion` is a npm module providing a CLI that enables code completion in WebStorm's JS editor for a 
 specific version of [(open)UI5](https://openui5.org). 
 
-![](./doc/usage.gif)
+[](doc/usage.gif)
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -74,14 +74,14 @@ preparing those sources for code completion.
 Then, tell WebStorm to use the library in your project.  
 (***this configuration is necessary, but only once***)   
 Open "Libraries in Scope" dialog:   
-![](./doc/ws-scope.png)   
+[](doc/ws-scope.png)   
 
 Check "LocalUI5Library" and "Manage Scopes":   
-![](./doc/ws-scope1.png)   
+[](doc/ws-scope1.png)   
 
 Select/Add the directory of your project code completion should apply to 
 via selecting "LocalUI5Library" in "Library" drop-down:   
-![](./doc/ws-scope1.png)
+[](doc/ws-scope1.png)
 
 ### download a custom version to a custom location and install and configure it for code completion
 ```
