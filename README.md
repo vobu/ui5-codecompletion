@@ -81,7 +81,7 @@ Check "LocalUI5Library" and "Manage Scopes":
 
 Select/Add the directory of your project code completion should apply to 
 via selecting "LocalUI5Library" in "Library" drop-down:   
-![assign lib](doc/ws-scope1.png)
+![assign lib](doc/ws-scope2.png)
 
 ### download a custom version to a custom location and install and configure it for code completion
 ```
