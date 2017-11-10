@@ -137,10 +137,9 @@ describe("install", function () {
         const {install} = require('../lib/commands'); // reset proxyquired/stubbed functionality
         let from = "http://metalodge.com/doesntexist.zip";
         let to = "local/ui5/dir";
-        install(from, to)
-            .catch(err => {
-                expect(err).to.include("doesn't seem to exist");
-                done();
-            })
+        install(from, to).then(function (expectedErrMsg) {
+            expect(expectedErrMsg).to.include("doesn't seem to exist");
+            done();
+        })
     })
 });
