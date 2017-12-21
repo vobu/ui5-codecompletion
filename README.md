@@ -37,7 +37,7 @@ Still, local install `npm install ui5-codecompletion` will of course provide you
       -f, --from       URL or file system path to zip-file w/ UI5 runtime sources,
                        defaults to
                        "https://openui5.hana.ondemand.com/downloads/openui5-runtime-
-                       1.44.24.zip"
+                       1.44.25.zip"
       -t, --to         file system path, relative to $project_dir, to store UI5
                        sources in; defaults to "$project/.ui5"
       -s, --sourceDir  file system path, relative to $project_dir, to configure code
