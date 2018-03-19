@@ -21,21 +21,21 @@
   "license": "WTFPL",
   "dependencies": {
     "adm-zip": "^0.4.7",
-    "config": "^1.26.2",
-    "fs-extra": "^4.0.1",
+    "config": "^1.30.0",
+    "fs-extra": "^4.0.3",
     "glob": "^7.1.2",
-    "handlebars": "^4.0.10",
-    "lodash": "^4.17.4",
+    "handlebars": "^4.0.11",
+    "lodash": "^4.17.5",
     "progress": "^2.0.0",
-    "request": "^2.83.0",
+    "request": "^2.85.0",
     "xml2js": "^0.4.19",
     "yargs": "^8.0.2"
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "mocha": "^3.5.0",
+    "mocha": "^3.5.3",
     "proxyquire": "^1.8.0",
-    "sinon": "^3.2.1"
+    "sinon": "^3.3.0"
   },
   "engines": {
     "node": ">=6.4.0"
