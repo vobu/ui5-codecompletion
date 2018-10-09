@@ -20,7 +20,7 @@
   },
   "license": "WTFPL",
   "dependencies": {
-    "adm-zip": "^0.4.7",
+    "adm-zip": "^0.4.11",
     "config": "^1.30.0",
     "fs-extra": "^5.0.0",
     "glob": "^7.1.2",
@@ -34,7 +34,6 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "mocha": "^5.0.4",
-    "npm-check-updates": "^2.14.1",
     "proxyquire": "^2.0.0",
     "sinon": "^4.4.6"
   },
