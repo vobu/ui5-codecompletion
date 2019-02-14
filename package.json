@@ -1,6 +1,6 @@
 {
   "name": "ui5-codecompletion",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "code completion for UI5 *.js files in WebStorm",
   "bin": "bin/index.js",
   "scripts": {
