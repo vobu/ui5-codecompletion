@@ -73,15 +73,12 @@ preparing those sources for code completion.
 
 Then, tell WebStorm to use the library in your project.  
 (***this configuration is necessary, but only once***)   
-Open "Libraries in Scope" dialog:   
-![activate lobal lib](doc/ws-scope.png)   
-
-Check "LocalUI5Library" and "Manage Scopes":   
-![manage scope](doc/ws-scope1.png)   
-
-Select/Add the directory of your project code completion should apply to 
+- Open the "Settings > Languages & Frameworks > JavaScript > Libraries" dialog
+- Select "LocalUI5Library" and hit "Manage Scopes"   
+  ![activate local lib](doc/scope1.png)   
+- Select/Add the directory of your project code completion should apply to 
 via selecting "LocalUI5Library" in "Library" drop-down:   
-![assign lib](doc/ws-scope2.png)
+![assign lib](doc/scope2.png)
 
 ### download a custom version to a custom location and install and configure it for code completion
 ```
