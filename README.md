@@ -1,6 +1,6 @@
 # UI5 codecompletion
 
-[![Build Status](https://travis-ci.org/vobu/ui5-codecompletion.svg?branch=develop)](https://travis-ci.org/vobujs/ui5-codecompletion) 
+[![Build Status](https://travis-ci.org/vobu/ui5-codecompletion.svg?branch=develop)](https://travis-ci.org/vobu/ui5-codecompletion) 
 [![npm Package](https://img.shields.io/npm/v/ui5-codecompletion.svg)](https://www.npmjs.com/package/ui5-codecompletion)
 
 `ui5-codecompletion` is a npm module providing a CLI that enables code completion in WebStorm's JS editor for a 
@@ -35,9 +35,7 @@ Still, local install `npm install ui5-codecompletion` will of course provide you
     Options:
       -h, --help       Show help                                           [boolean]
       -f, --from       URL or file system path to zip-file w/ UI5 runtime sources,
-                       defaults to
-                       "https://openui5.hana.ondemand.com/downloads/openui5-runtime-
-                       1.61.2.zip"
+                       defaults to latest OpenUI5 version available
       -t, --to         file system path, relative to $project_dir, to store UI5
                        sources in; defaults to "$project/.ui5"
       -s, --sourceDir  file system path, relative to $project_dir, to configure code
