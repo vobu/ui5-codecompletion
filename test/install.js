@@ -4,10 +4,10 @@ const proxyquire = require('proxyquire').noPreserveCache();
 const fs = require('fs-extra');
 
 describe("from parameter", function () {
-    it("should be set to the default value if omitted", function () {
+    it("should be set to the default value if omitted", async function () {
         const {builder} = require('../lib/_commands/install');
         const constants = require('../lib/constants');
-        expect(builder.from.default).to.be.equal(constants.defaultUI5version);
+        expect(await builder.from.default).to.be.equal(await constants.defaultUI5version.then(res=>res));
     });
     it("should allow local file path to a UI5 zip", function () {
         const helpers = require('../lib/helpers');

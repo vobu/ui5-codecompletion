@@ -15,7 +15,8 @@ it('should show a hint if called with no commands/options', function () {
     expect(child.stderr).to.include('at least one command');
 });     
 
-it('should show usage information if called with either -h or --help', function() {
+it('should show usage information if called with --help', function() {
+
     function expectations(stderr, stdout) {
         "use strict";
         expect(stderr).to.be.empty;
@@ -23,13 +24,6 @@ it('should show usage information if called with either -h or --help', function(
             .and.include('install [from]')
             .and.include('configure');
     }
-    
-    const ui5cc_h = path.join(process.cwd(), "bin/index.js");
-    const child_h = spawnSync(ui5cc_h, ["-h"], {
-        stdio: 'pipe',
-        encoding: 'utf-8'
-    });
-    expectations(child_h.stderr, child_h.stdout);
 
     const ui5cc_help = path.join(process.cwd(), "bin/index.js");
     const child_help = spawnSync(ui5cc_help, ["--help"], {
@@ -37,5 +31,24 @@ it('should show usage information if called with either -h or --help', function(
         encoding: 'utf-8'
     });
     expectations(child_help.stderr, child_help.stdout);
+});
 
+it('should show usage information if called with -h', function() {
+
+    function expectations(stderr, stdout) {
+        "use strict";
+        expect(stderr).to.be.empty;
+        expect(stdout).to.include('Usage: ui5-codecompletion')
+            .and.include('install [from]')
+            .and.include('configure');
+        
+    }
+
+    const ui5cc_h = path.join(process.cwd(), "bin/index.js");
+    const child_h = spawnSync(ui5cc_h, ["-h"], {
+        stdio: 'pipe',
+        encoding: 'utf-8'
+    });
+    expectations(child_h.stderr, child_h.stdout);
+    
 });
